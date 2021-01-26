@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CommonMark",
+        "repositoryURL": "https://github.com/cuongb1400682/cmark.git",
+        "state": {
+          "branch": null,
+          "revision": "2f68e5673e158ef5b10481b3b4c57006476ebb08",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

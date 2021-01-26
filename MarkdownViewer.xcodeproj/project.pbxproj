@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,8 @@
 		A981325925BEF2AD00921818 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A981325825BEF2AD00921818 /* ViewController.swift */; };
 		A981325B25BEF2AE00921818 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A981325A25BEF2AE00921818 /* Assets.xcassets */; };
 		A981325E25BEF2AE00921818 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A981325C25BEF2AE00921818 /* Main.storyboard */; };
+		A981326E25BEF9A800921818 /* libcmark.0.29.0.dylib in Resources */ = {isa = PBXBuildFile; fileRef = A981326D25BEF9A800921818 /* libcmark.0.29.0.dylib */; };
+		A9B0E7A725C0419E006BA583 /* CommonMark in Frameworks */ = {isa = PBXBuildFile; productRef = A9B0E7A625C0419E006BA583 /* CommonMark */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,7 @@
 		A981325D25BEF2AE00921818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A981325F25BEF2AE00921818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A981326025BEF2AE00921818 /* MarkdownViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MarkdownViewer.entitlements; sourceTree = "<group>"; };
+		A981326D25BEF9A800921818 /* libcmark.0.29.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcmark.0.29.0.dylib; path = ../../../../../usr/local/Cellar/cmark/0.29.0_2/lib/libcmark.0.29.0.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9B0E7A725C0419E006BA583 /* CommonMark in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +43,7 @@
 			children = (
 				A981325525BEF2AD00921818 /* MarkdownViewer */,
 				A981325425BEF2AD00921818 /* Products */,
+				A981326C25BEF9A700921818 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,14 +58,38 @@
 		A981325525BEF2AD00921818 /* MarkdownViewer */ = {
 			isa = PBXGroup;
 			children = (
+				A981326725BEF2E100921818 /* Main UI */,
+				A981326825BEF2EE00921818 /* Supporting Files */,
+			);
+			path = MarkdownViewer;
+			sourceTree = "<group>";
+		};
+		A981326725BEF2E100921818 /* Main UI */ = {
+			isa = PBXGroup;
+			children = (
 				A981325625BEF2AD00921818 /* AppDelegate.swift */,
 				A981325825BEF2AD00921818 /* ViewController.swift */,
+			);
+			name = "Main UI";
+			sourceTree = "<group>";
+		};
+		A981326825BEF2EE00921818 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				A981325A25BEF2AE00921818 /* Assets.xcassets */,
 				A981325C25BEF2AE00921818 /* Main.storyboard */,
 				A981325F25BEF2AE00921818 /* Info.plist */,
 				A981326025BEF2AE00921818 /* MarkdownViewer.entitlements */,
 			);
-			path = MarkdownViewer;
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A981326C25BEF9A700921818 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A981326D25BEF9A800921818 /* libcmark.0.29.0.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -79,6 +108,9 @@
 			dependencies = (
 			);
 			name = MarkdownViewer;
+			packageProductDependencies = (
+				A9B0E7A625C0419E006BA583 /* CommonMark */,
+			);
 			productName = MarkdownViewer;
 			productReference = A981325325BEF2AD00921818 /* MarkdownViewer.app */;
 			productType = "com.apple.product-type.application";
@@ -107,6 +139,9 @@
 				Base,
 			);
 			mainGroup = A981324A25BEF2AD00921818;
+			packageReferences = (
+				A9B0E7A525C0419E006BA583 /* XCRemoteSwiftPackageReference "cmark" */,
+			);
 			productRefGroup = A981325425BEF2AD00921818 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -123,6 +158,7 @@
 			files = (
 				A981325B25BEF2AE00921818 /* Assets.xcassets in Resources */,
 				A981325E25BEF2AE00921818 /* Main.storyboard in Resources */,
+				A981326E25BEF9A800921818 /* libcmark.0.29.0.dylib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +308,7 @@
 				CODE_SIGN_ENTITLEMENTS = MarkdownViewer/MarkdownViewer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				COPY_HEADERS_UNIFDEF_FLAGS = /usr/local/include/cmark.h;
 				DEVELOPMENT_TEAM = ZP24FBUW2V;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = MarkdownViewer/Info.plist;
@@ -279,8 +316,15 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/cmark/0.29.0_2/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MODULEMAP_FILE = /Users/cuong.tan/Desktop/SwiftTalk/MarkdownViewer/MarkdownViewer/Ccmark/module.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tancuong.MarkdownViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -292,6 +336,7 @@
 				CODE_SIGN_ENTITLEMENTS = MarkdownViewer/MarkdownViewer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				COPY_HEADERS_UNIFDEF_FLAGS = /usr/local/include/cmark.h;
 				DEVELOPMENT_TEAM = ZP24FBUW2V;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = MarkdownViewer/Info.plist;
@@ -299,8 +344,15 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/cmark/0.29.0_2/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MODULEMAP_FILE = /Users/cuong.tan/Desktop/SwiftTalk/MarkdownViewer/MarkdownViewer/Ccmark/module.modulemap;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tancuong.MarkdownViewer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -327,6 +379,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A9B0E7A525C0419E006BA583 /* XCRemoteSwiftPackageReference "cmark" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cuongb1400682/cmark.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A9B0E7A625C0419E006BA583 /* CommonMark */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9B0E7A525C0419E006BA583 /* XCRemoteSwiftPackageReference "cmark" */;
+			productName = CommonMark;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A981324B25BEF2AD00921818 /* Project object */;
 }
