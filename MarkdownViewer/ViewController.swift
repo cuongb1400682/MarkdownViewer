@@ -7,13 +7,16 @@
 //
 
 import Cocoa
+import CommonMark
 
 class ViewController: NSViewController {
-
+    @IBOutlet var plainTextEdit: NSTextView!
+    @IBOutlet var richTextEdit: NSTextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        richTextEdit.font = .systemFont(ofSize: 14)
+        plainTextEdit.font = .sanFranciscoMono
     }
 
     override var representedObject: Any? {
@@ -21,7 +24,12 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
+}
 
-
+extension ViewController: NSTextViewDelegate {
+    func textDidChange(_ notification: Notification) {
+        let tree = Node(markdown: plainTextEdit.string)
+        richTextEdit.string = tree.description
+    }
 }
 

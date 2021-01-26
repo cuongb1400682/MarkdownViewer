@@ -12,6 +12,8 @@
 		A981325B25BEF2AE00921818 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A981325A25BEF2AE00921818 /* Assets.xcassets */; };
 		A981325E25BEF2AE00921818 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A981325C25BEF2AE00921818 /* Main.storyboard */; };
 		A981326E25BEF9A800921818 /* libcmark.0.29.0.dylib in Resources */ = {isa = PBXBuildFile; fileRef = A981326D25BEF9A800921818 /* libcmark.0.29.0.dylib */; };
+		A9841F6525C04D8700EF147A /* NSFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9841F6425C04D8700EF147A /* NSFont.swift */; };
+		A9841F6625C04E9800EF147A /* SF-Mono-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A9841F6025C04D6200EF147A /* SF-Mono-Regular.otf */; };
 		A9B0E7A725C0419E006BA583 /* CommonMark in Frameworks */ = {isa = PBXBuildFile; productRef = A9B0E7A625C0419E006BA583 /* CommonMark */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +26,8 @@
 		A981325F25BEF2AE00921818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A981326025BEF2AE00921818 /* MarkdownViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MarkdownViewer.entitlements; sourceTree = "<group>"; };
 		A981326D25BEF9A800921818 /* libcmark.0.29.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcmark.0.29.0.dylib; path = ../../../../../usr/local/Cellar/cmark/0.29.0_2/lib/libcmark.0.29.0.dylib; sourceTree = "<group>"; };
+		A9841F6025C04D6200EF147A /* SF-Mono-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Mono-Regular.otf"; sourceTree = "<group>"; };
+		A9841F6425C04D8700EF147A /* NSFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 		A981325525BEF2AD00921818 /* MarkdownViewer */ = {
 			isa = PBXGroup;
 			children = (
+				A9841F6325C04D7E00EF147A /* Extensions */,
+				A9841F5F25C04D5300EF147A /* Fonts */,
 				A981326725BEF2E100921818 /* Main UI */,
 				A981326825BEF2EE00921818 /* Supporting Files */,
 			);
@@ -90,6 +96,22 @@
 				A981326D25BEF9A800921818 /* libcmark.0.29.0.dylib */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9841F5F25C04D5300EF147A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A9841F6025C04D6200EF147A /* SF-Mono-Regular.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		A9841F6325C04D7E00EF147A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A9841F6425C04D8700EF147A /* NSFont.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9841F6625C04E9800EF147A /* SF-Mono-Regular.otf in Resources */,
 				A981325B25BEF2AE00921818 /* Assets.xcassets in Resources */,
 				A981325E25BEF2AE00921818 /* Main.storyboard in Resources */,
 				A981326E25BEF9A800921818 /* libcmark.0.29.0.dylib in Resources */,
@@ -171,6 +194,7 @@
 			files = (
 				A981325925BEF2AD00921818 /* ViewController.swift in Sources */,
 				A981325725BEF2AD00921818 /* AppDelegate.swift in Sources */,
+				A9841F6525C04D8700EF147A /* NSFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
