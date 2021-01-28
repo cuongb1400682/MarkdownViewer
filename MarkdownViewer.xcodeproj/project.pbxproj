@@ -14,6 +14,8 @@
 		A981326E25BEF9A800921818 /* libcmark.0.29.0.dylib in Resources */ = {isa = PBXBuildFile; fileRef = A981326D25BEF9A800921818 /* libcmark.0.29.0.dylib */; };
 		A9841F6525C04D8700EF147A /* NSFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9841F6425C04D8700EF147A /* NSFont.swift */; };
 		A9841F6625C04E9800EF147A /* SF-Mono-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A9841F6025C04D6200EF147A /* SF-Mono-Regular.otf */; };
+		A998B91725C2EF0400C8522C /* CommonMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = A998B91625C2EF0400C8522C /* CommonMark.swift */; };
+		A998B91A25C2EFCD00C8522C /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = A998B91925C2EFCD00C8522C /* Array.swift */; };
 		A9B0E7A725C0419E006BA583 /* CommonMark in Frameworks */ = {isa = PBXBuildFile; productRef = A9B0E7A625C0419E006BA583 /* CommonMark */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		A981326D25BEF9A800921818 /* libcmark.0.29.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcmark.0.29.0.dylib; path = ../../../../../usr/local/Cellar/cmark/0.29.0_2/lib/libcmark.0.29.0.dylib; sourceTree = "<group>"; };
 		A9841F6025C04D6200EF147A /* SF-Mono-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Mono-Regular.otf"; sourceTree = "<group>"; };
 		A9841F6425C04D8700EF147A /* NSFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSFont.swift; sourceTree = "<group>"; };
+		A998B91625C2EF0400C8522C /* CommonMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMark.swift; sourceTree = "<group>"; };
+		A998B91925C2EFCD00C8522C /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				A9841F6425C04D8700EF147A /* NSFont.swift */,
+				A998B91625C2EF0400C8522C /* CommonMark.swift */,
+				A998B91925C2EFCD00C8522C /* Array.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -193,7 +199,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A981325925BEF2AD00921818 /* ViewController.swift in Sources */,
+				A998B91A25C2EFCD00C8522C /* Array.swift in Sources */,
 				A981325725BEF2AD00921818 /* AppDelegate.swift in Sources */,
+				A998B91725C2EF0400C8522C /* CommonMark.swift in Sources */,
 				A9841F6525C04D8700EF147A /* NSFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,13 +15,12 @@ class ViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        richTextEdit.font = .systemFont(ofSize: 14)
+        richTextEdit.font = .defaultFont
         plainTextEdit.font = .sanFranciscoMono
     }
 
     override var representedObject: Any? {
         didSet {
-        // Update the view, if already loaded.
         }
     }
 }
@@ -29,7 +28,11 @@ class ViewController: NSViewController {
 extension ViewController: NSTextViewDelegate {
     func textDidChange(_ notification: Notification) {
         let tree = Node(markdown: plainTextEdit.string)
-        richTextEdit.string = tree.description
+        
+        if let renderedText = tree.elements[safe: 0]?.render(.defaultFont) {
+            richTextEdit.textStorage?.setAttributedString(renderedText)
+            print(renderedText)
+        }
     }
 }
 
